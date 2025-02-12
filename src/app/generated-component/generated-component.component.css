@@ -1,0 +1,45 @@
+.container {
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #007bff;
+  }
+  
+  h2 {
+    color: #ff5733;
+    margin-top: 20px;
+  }
+  
+  h3 {
+    color: #28a745;
+    margin-top: 15px;
+  }
+  
+  p, ul {
+    font-size: 16px;
+    color: #333;
+  }
+  ul {
+    padding-left: 20px; /* Adjust indentation */
+    list-style-position: outside; /* Ensure bullets align properly */
+  }
+  
+  ul li {
+    margin-left: 10px; /* Reduce extra spacing */
+  }
+  
+  ul li ul {
+    padding-left: 15px; /* Proper nesting for sub-items */
+  }
+  
+  code {
+    background-color: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  

@@ -1,0 +1,5 @@
+<h2>Parent Component</h2>
+<button (click)="toggleChild()">Toggle Child</button>
+<button (click)="changeData()">Change Data</button>
+
+<app-child *ngIf="showChild" [data]="childData"></app-child>

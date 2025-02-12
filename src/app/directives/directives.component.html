@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Structural & Attribute Directives Example</h2>
+  
+    <!-- *ngIf Example -->
+    <button (click)="showMessage = !showMessage">Toggle Message</button>
+    <p *ngIf="showMessage">This message is visible because *ngIf is true.</p>
+  
+    <!-- *ngFor Example -->
+    <h3>List of Items:</h3>
+    <ul style="list-style-position: inside;">
+      <li *ngFor="let item of items">{{ item }}</li>
+    </ul>
+  
+    <!-- [ngStyle] Example -->
+    <p [ngStyle]="{'color': textColor, 'font-weight': 'bold'}">
+      This text color changes dynamically.
+    </p>
+    <button (click)="toggleColor()">Change Color</button>
+  </div>
+  

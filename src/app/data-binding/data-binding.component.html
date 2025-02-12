@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Data Binding Example</h2>
+  
+    <!-- Interpolation -->
+    <p>Welcome, {{ username }}!</p>
+  
+    <!-- Property Binding -->
+    <input [value]="username" placeholder="Enter Name" />
+  
+    <!-- Two-Way Binding -->
+    <input [(ngModel)]="username" placeholder="Two-way Binding Example" />
+  
+    <!-- Event Binding -->
+    <button (click)="greetUser()">Greet</button>
+  
+    <p>{{ message }}</p>
+  </div>
+  
