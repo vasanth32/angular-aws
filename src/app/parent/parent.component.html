@@ -3,3 +3,9 @@
 <button (click)="changeData()">Change Data</button>
 
 <app-child *ngIf="showChild" [data]="childData"></app-child>
+
+
+<p>Sending Message to Child: {{ parentMessage }}</p>
+
+<!-- Pass data using @Input() -->
+<app-child [childMessage]="parentMessage" (childEvent)="handleChildEvent($event)"></app-child>

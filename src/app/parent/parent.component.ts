@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 export class ParentComponent {
   showChild = true;
   childData = 'Initial Data';
+  parentMessage = "Hello from Parent!";
+
 
   toggleChild() {
     this.showChild = !this.showChild;
@@ -18,4 +20,8 @@ export class ParentComponent {
   changeData() {
     this.childData = 'Updated Data ' + Math.random();
   }
+  handleChildEvent(message: string) {
+    alert("Received from Child: " + message);
+  }
+
 }

@@ -1,1 +1,7 @@
 <p>Child Component Loaded! Received: {{ data }}</p>
+
+<h3>Child Component</h3>
+<p>Received from Parent: {{ childMessage }}</p>
+
+<!-- Button to trigger @Output() event -->
+<button (click)="sendMessageToParent()">Send Message to Parent</button>

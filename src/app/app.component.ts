@@ -8,12 +8,11 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { CommonModule } from '@angular/common';
 import { DirectivesComponent } from "./directives/directives.component";
 import { ParentComponent } from "./parent/parent.component";
-import { ChildComponent } from './child/child.component';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, GeneratedComponentComponent,
     HeaderComponent, FooterComponent, FormsModule, DataBindingComponent, CommonModule, 
-    DirectivesComponent, ParentComponent,ChildComponent],
+    DirectivesComponent, ParentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
