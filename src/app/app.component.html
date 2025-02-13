@@ -6,6 +6,8 @@
     <button (click)="selectedTab = 'data-binding'">Data Binding</button>
     <button (click)="selectedTab = 'directives'">Directives</button>
     <button (click)="selectedTab = 'lifecycle'">Lifecycle Hooks</button>
+    <button (click)="selectedTab = 'first-log'">First Log</button>
+    <button (click)="selectedTab = 'second-log'">Second Log</button>
   </div>
 
   <div class="content">
@@ -13,6 +15,8 @@
     <app-data-binding *ngIf="selectedTab === 'data-binding'"></app-data-binding>
     <app-directives *ngIf="selectedTab === 'directives'"></app-directives>
     <app-parent *ngIf="selectedTab === 'lifecycle'"></app-parent>
+    <app-parent *ngIf="selectedTab === 'first-log'"></app-parent>
+    <app-parent *ngIf="selectedTab === 'second-log'"></app-parent>
   </div>
 
   <app-footer></app-footer>

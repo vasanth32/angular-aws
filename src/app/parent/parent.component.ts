@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ChildComponent } from "../child/child.component";
 import { CommonModule } from '@angular/common';
 @Component({
@@ -11,6 +11,15 @@ export class ParentComponent {
   showChild = true;
   childData = 'Initial Data';
   parentMessage = "Hello from Parent!";
+  @ViewChild(ChildComponent) child!: ChildComponent; // Reference to ChildComponent
+
+  ngAfterViewInit() {
+    console.log("Child Message:", this.child.childDataMessage); // Access child property after view initialization
+  }
+
+  callChildMethod() {
+    this.child.showAlert(); // Calling child method from parent
+  }
 
 
   toggleChild() {

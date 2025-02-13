@@ -9,3 +9,8 @@
 
 <!-- Pass data using @Input() -->
 <app-child [childMessage]="parentMessage" (childEvent)="handleChildEvent($event)"></app-child>
+
+<button (click)="callChildMethod()">Call Child Method</button>
+<app-child>
+    <p #projectedContent>This is projected content from Parent!</p>
+  </app-child>

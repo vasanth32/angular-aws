@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, ContentChild,ElementRef , EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -10,9 +10,15 @@ export class ChildComponent implements OnInit, OnChanges, OnDestroy {
   @Input() childMessage: string = ""; // Receiving data from parent
   
   @Output() childEvent = new EventEmitter<string>(); // Sending event to parent
+  @ContentChild('projectedContent') projected!: ElementRef; // Access projected content
   
+  childDataMessage = "Hello from Child!";
+
   sendMessageToParent() {
     this.childEvent.emit("Hello Parent! This is Child.");
+  }
+  showAlert() {
+    alert("Button clicked from Parent!");
   }
   constructor() {
     console.log('ChildComponent: Constructor');
